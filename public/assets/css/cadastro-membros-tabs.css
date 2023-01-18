@@ -37,7 +37,7 @@
 }
 
 .conteudo {
-    height: 320px;
+    height: 900px;
     width: 79.6vw;
 
     display: none;
@@ -46,9 +46,15 @@
 }
 
 .rd_tabs:checked ~ .conteudo {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 50px;
+    
 }
 
+.rd_tabs:checked ~ .conteudo > div{
+    
+}
 .rd_tabs#tab-complemento:checked ~ .conteudo {
     transform: translateX(-15vw);
 }

@@ -14,10 +14,9 @@
         <input type="submit" value="pesquisar">
     </form>
 
-    {{-- Exibir alunos cadastrados, utilizando foreach --}}
+    {{-- Exibir alunos cadastrados, utilizando diretiva @foreach--}}
     <h4>Membros Cadastrados:</h4>
     <div id="exibir-membros">
-        {{-- nome deverá ter rowspan 2 ou 3 --}}
         <button id="nome">Nome</button>
         <button>Congregação</button>
         <button>Nº Setor</button>
