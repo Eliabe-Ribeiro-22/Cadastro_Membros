@@ -42,7 +42,7 @@
 
     display: none;
     position: absolute;
-    background: #c83737;
+    background: #ffffff;
 }
 
 .rd_tabs:checked ~ .conteudo {

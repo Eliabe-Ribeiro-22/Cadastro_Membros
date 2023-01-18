@@ -18,24 +18,6 @@
                 <input type="text" name="nome" id="input-nome" placeholder="Eliabe Ribeiro Mota">
             </div>
 
-            <div>
-                <label for="cpf">CPF(somente números):</label>
-                <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="12345678998">
-            </div>
-            <div>
-                <label for="input-endereco">Endereço completo:</label>
-                <input type="text" name="endereco" id="input-endereco" placeholder="Avenida Brasil, nº 98, Centro">
-            </div>
-
-            <div>
-                <label for="input-cidade">Cidade:</label>
-                <input type="text" name="cidade" id="input-cidade" placeholder="Lages">
-            </div>
-            <div>
-                <label for="celular">Celular:</label>
-                <input type="tel" name="celular" id="celular" placeholder="049 98842-6048"
-                    pattern="[0-9]{3} [0-9]{1} [0-9]{4}-[0-9]{4}">
-            </div>
 
             <nav class="nav_tabs">
                 <ul>
@@ -44,11 +26,26 @@
                         <input type="radio" name="tabs" class="rd_tabs" id="tab-dados-cadastrais" checked>
                         <label for="tab-dados-cadastrais">Dados Cadastrais</label>
                         <div class="conteudo">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi velit, accusantium fuga aut
-                            ipsam
-                            nemo, neque nisi quis quidem quia libero consequatur rerum porro esse, exercitationem aperiam ex
-                            aliquam
-                            minus.
+                            <div>
+                                <label for="cpf">CPF(somente números):</label>
+                                <input type="text" name="cpf" id="cpf" maxlength="11"
+                                    placeholder="12345678998">
+                            </div>
+                            <div>
+                                <label for="input-endereco">Endereço completo:</label>
+                                <input type="text" name="endereco" id="input-endereco"
+                                    placeholder="Avenida Brasil, nº 98, Centro">
+                            </div>
+
+                            <div>
+                                <label for="input-cidade">Cidade:</label>
+                                <input type="text" name="cidade" id="input-cidade" placeholder="Lages">
+                            </div>
+                            <div>
+                                <label for="celular">Celular:</label>
+                                <input type="tel" name="celular" id="celular" placeholder="049 98842-6048"
+                                    pattern="[0-9]{3} [0-9]{1} [0-9]{4}-[0-9]{4}">
+                            </div>
                         </div>
                     </li>
                     <li>
@@ -57,8 +54,34 @@
                         <label for="tab-complemento">Complemento</label>
                         <div class="conteudo">
                             <div>
-                                <label for="input-endereco">Endereço completo:</label>
-                                <input type="text" id="input-endereco" placeholder="Avenida Brasil, nº 98, Centro">
+                                <label for="dataConversao">Data da Conversão:</label>
+                                <input type="date" name="dataConversao" id="dataConversao">
+                            </div>
+
+                            <div>
+                                <label for="batismoAguas">Local do Batismo em Águas:</label>
+                                <input type="text" name="batismoAguas" id="batismoAguas">
+                            </div>
+
+                            <div>
+                                <label for="dataBatismoAguas">Data de Batismo:</label>
+                                <input type="date" name="dataBatismoAguas" id="dataBatismoAguas">
+                            </div>
+
+                            <div>
+                                <label for="batismoES">Local do Batismo Espírito Santo:</label>
+                                <input type="text" name="batismoES" id="batismoES">
+                            </div>
+
+                            <div>
+                                <label for="dataBatismoES">Data de Batismo Espírito Santo</label>
+                                <input type="date" name="dataBatismoES" id="dataBatismoES">
+                            </div>
+
+                            <div>
+                                <label for="dizimista">Dizimista</label>
+                                <input type="radio" name="dizimista" id="0">Não
+                                <input type="radio" name="dizimista" id="1">Sim
                             </div>
                         </div>
                     </li>
