@@ -1,8 +1,9 @@
-@extends('main')
+@extends('templates.main')
 
 @section('titulo', 'Alterando: ' . $membro->nome)
 
 @section('conteudo')
+    <h1>Alterando membro: {{ $membro->nome }}</h1>
     <form action="{{ route('update', ['id' => $membro->id]) }}" method="post">
         @csrf
         @method('PUT')
@@ -20,7 +21,7 @@
         <label for="celular">Celular:</label>
         <input type="tel" name="celular" id="celular" placeholder="049 98842-6048"
             pattern="[0-9]{3} [0-9]{1} [0-9]{4}-[0-9]{4}" value="{{ $membro->celular }}">
-        <input type="submit" value="enviar">
+        <input type="submit" value="alterar">
     </form>
     <br>
     <br>

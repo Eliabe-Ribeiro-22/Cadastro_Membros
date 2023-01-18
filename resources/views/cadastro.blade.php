@@ -1,8 +1,9 @@
-@extends('main')
+@extends('templates.main')
 
 @section('titulo', 'Cadastro de Membros')
 
 @section('conteudo')
+    <h1>Cadastro de Membros</h1>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <label for="nome">Nome:</label>
