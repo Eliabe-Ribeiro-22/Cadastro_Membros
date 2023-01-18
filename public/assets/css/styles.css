@@ -3,7 +3,6 @@
 
 @import "exibir-membros.css";
 
-
 * {
     margin: 0;
     padding: 0;
@@ -58,61 +57,4 @@ aside > nav > a:hover {
 
 main {
     margin-left: 220px;
-    /* padding-left: 20px; */
-}
-
-.nav_tabs {
-    width: 600px;
-    height: 300px;
-    /* margin: 100px 0; */
-    background: #fff;
-    position: relative;
-}
-
-.nav_tabs > ul {
-    list-style: none;
-}
-
-.nav_tabs > ul > li {
-    float: left;
-}
-
-.nav_tabs > ul > li > label {
-    width: 15vw;
-    padding: 0.6rem;
-
-    display: block;
-
-    font-size: 14px;
-    text-align: center;
-    color: #000;
-
-    background: #c9c7c7;
-    cursor: pointer;
-}
-
-.rd_tabs:checked ~ label {
-    background: #525252;
-    color: white;
-}
-
-.rd_tabs {
-    display: none;
-}
-
-.conteudo {
-    display: none;
-    position: absolute;
-    height: 320px;
-    /* largura do conteudo */
-    width: 80vw;
-    background: #c83737;
-}
-
-.rd_tabs:checked ~ .conteudo {
-    display: block;
-}
-
-.rd_tabs#tab-complemento:checked ~ .conteudo {
-    transform: translateX(-17vw);
 }

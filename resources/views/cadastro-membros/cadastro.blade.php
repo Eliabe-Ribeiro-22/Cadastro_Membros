@@ -58,17 +58,19 @@
                         <div class="conteudo">
                             <div>
                                 <label for="input-endereco">Endereço completo:</label>
-                                <input type="text" name="endereco" id="input-endereco"
-                                    placeholder="Avenida Brasil, nº 98, Centro">
+                                <input type="text" id="input-endereco" placeholder="Avenida Brasil, nº 98, Centro">
                             </div>
                         </div>
                     </li>
                 </ul>
             </nav>
 
-            <button type="submit">&#128190; Cadastrar</button>
-            <button>Listagem</button>
-            <button>Pesquisar membro</button>
+            <div style="position: relative">
+                <button type="submit">&#128190; Cadastrar</button>
+                <button>Listagem</button>
+                <button>Pesquisar membro</button>
+            </div>
+
         </fieldset>
     </form>
 @endsection
