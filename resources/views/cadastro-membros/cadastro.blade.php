@@ -18,6 +18,17 @@
                 <input type="text" name="nome" id="input-nome" placeholder="Eliabe Ribeiro Mota">
             </div>
 
+            <div>
+                <label for="situacao">Situação:</label>
+                <select name="situacao" id="situacao">
+                    <option value="0">Membro Ativo</option>
+                    <option value="1">Congregado Ativo</option>
+                    <option value="2">Disciplinado</option>
+                    <option value="3">Desligado</option>
+                    <option value="4">Mudou-se de igreja</option>
+                    <option value="5">Óbito</option>
+                </select>
+            </div>
 
             <nav class="nav_tabs">
                 <ul>
@@ -88,10 +99,10 @@
                 </ul>
             </nav>
 
-            <div style="position: relative">
+            <div class="button-actions">
                 <button type="submit">&#128190; Cadastrar</button>
                 <button>Listagem</button>
-                <button>Pesquisar membro</button>
+                <button id="pesquisar-membro">Pesquisar membro</button>
             </div>
 
         </fieldset>

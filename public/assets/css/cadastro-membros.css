@@ -5,7 +5,8 @@
     width: 80vw;
 }
 
-#form-cadastro-membro > fieldset > div {
+:is(#form-cadastro-membro > fieldset) > div:has(input),
+select {
     margin-top: 10px;
     margin-left: 100px;
 }
@@ -14,6 +15,7 @@
     display: block;
     font: 16px "Calibri", Arial, sans-serif;
 }
+
 #form-cadastro-membro > fieldset > div input {
     padding: 5px 10px;
     font: 16px Helvetica, Arial, sans-serif;
@@ -28,4 +30,38 @@
 
 #form-cadastro-membro > fieldset > div #input-endereco {
     width: 30vw;
+}
+
+#form-cadastro-membro > fieldset > div.button-actions {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: relative;
+    background-color: #a4a4a4;
+}
+
+#form-cadastro-membro > fieldset > div.button-actions > button {
+    width: 7rem;
+    height: 3rem;
+
+    background: #b35802;
+    cursor: pointer;
+
+    color: #fff;
+    font: 16px "Roboto", Arial, sans-serif;
+
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+#form-cadastro-membro > fieldset > div.button-actions > button:hover {
+    background: rgb(227, 137, 52);
+}
+
+#form-cadastro-membro > fieldset > div.button-actions > button#pesquisar-membro {
+    width: 10rem;
 }
