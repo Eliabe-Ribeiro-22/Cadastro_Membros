@@ -13,5 +13,15 @@ class Membro extends Model
         'items' => 'array',
     ];
 
-    protected $fillable = ['nome', 'cpf', 'endereco', 'cidade', 'celular'];
+    protected $fillable = [
+        'nome', 
+        'cpf', 'endereco', 
+        'cidade', 
+        'celular',
+        'complemento',
+        'batismoAguas',
+        'dataBatismoAguas',
+        'batismoES',
+        'dataBatismoES',
+    ];
 }
