@@ -17,7 +17,7 @@ class CadastroController extends Controller
 
     public function store(Request $request)
     {
-        echo "<script>alert('entrou aqui') </script>";
+        
         $membro = new Membro();
 
         $membro->nome = $request->nome;
@@ -28,13 +28,18 @@ class CadastroController extends Controller
 
         $membro->save();
 
-        return redirect('/');
+        return redirect('/')->with('msg', 'Membro cadastrado com sucesso!');
     }
 
-    public function show($id = 1)
-    {
+    public function show($id = 1){
         $membro = Membro::findOrFail($id);
 
         return view('show', ['membro' => $membro]);
+    }
+
+    public function destroy($id){
+        Membro::findOrFail($id)->delete();
+
+        return redirect('/')->with('msg', 'Membro excluído com sucesso!');
     }
 }

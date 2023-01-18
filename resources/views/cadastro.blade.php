@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    @if (session('msg'))
+        <p>{{ session('msg') }}</p>
+    @endif
     <form action="{{ route('store') }}" method="post">
         @csrf
         <label for="nome">Nome:</label>
@@ -43,13 +46,19 @@
         <h3>{{ $membro->cidade }}</h3>
         <h3>{{ $membro->celular }}</h3>
         <button>Editar</button>
-        <button>Excluir</button>
-        <button>{{ $membro->id }}</button>
+
+        <form action="{{ route('destroy', ['id' => $membro->id]) }}" method="post">
+            @csrf
+            @method('DELETE')
+            <button>Excluir</button>
+        </form>
+
+
         <form action="{{ route('show', ['id' => $membro->id]) }}" method="post">
             @csrf
             <input type="submit" value="Ver outras informações">
         </form>
-        
+
         <br>
         <br>
     @endforeach

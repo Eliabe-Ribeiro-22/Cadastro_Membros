@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CadastroController;
 
 Route::get('/', [CadastroController::class, 'index'])->name('index');
+
+// Exibir pesquisa de um membro
 Route::post('/membros/{id}', [CadastroController::class, 'show'])->name('show');
 
+//  Salvar um registro
 Route::post('/membros', [CadastroController::class, 'store'])->name('store');
+
+// Deletar um registro
+Route::delete('/membros/{id}', [CadastroController::class, 'destroy'])->name('destroy');
