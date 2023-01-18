@@ -16,7 +16,8 @@
 <body>
     <aside>
         <nav>
-            <a href="#">Secretaria</a>
+            <a href="{{ route('index') }}">Início</a>
+            <a href="{{ route('index') }}">Secretaria</a>
             <a href="#">Tesouraria</a>
             <a href="#">Patrimonial</a>
             <a href="#">Cadastro de Usuários</a>

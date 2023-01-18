@@ -27,22 +27,22 @@
         <button>Editar</button>
         <button>Excluir</button>
         @foreach ($membros as $membro)
-                <a>{{ $membro->nome }}</a>
-                <a>{{ $membro->cidade }}</a>
-                <a>{{ $membro->celular }}</a>
-                <a>{{ $membro->cidade }}</a>
-                <a>{{ $membro->cidade }}</a>
-                <a>{{ $membro->cidade }}</a>
-                <a href="{{ route('edit', ['id' => $membro->id]) }}">
-                    &#128393;
-                </a>
-                <a>
-                    <form action="{{ route('destroy', ['id' => $membro->id]) }}" method="POST" id="btn-form-del">
-                        @csrf
-                        @method('DELETE')
-                        <button>&#128465;</button>
-                    </form>
-                </a>
+            <a>{{ $membro->nome }}</a>
+            <a>{{ $membro->cidade }}</a>
+            <a>{{ $membro->celular }}</a>
+            <a>{{ $membro->cidade }}</a>
+            <a>{{ $membro->cidade }}</a>
+            <a>{{ $membro->cidade }}</a>
+            <a href="{{ route('edit', ['id' => $membro->id]) }}">
+                &#128393;
+            </a>
+            <a>
+                <form action="{{ route('destroy', ['id' => $membro->id]) }}" method="POST" id="btn-form-del">
+                    @csrf
+                    @method('DELETE')
+                    <button>&#128465;</button>
+                </form>
+            </a>
         @endforeach
     </div>
 @endsection
