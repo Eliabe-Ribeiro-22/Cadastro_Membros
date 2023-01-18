@@ -24,10 +24,23 @@ class CadastroController extends Controller
         $membro = new Membro();
 
         $membro->nome = $request->nome;
+        // select situacao
+        // $membro->situacao = 0 || 1 || 2 || 3 || 4 || 5;
+
+        // Guia Dados Cadastrais
         $membro->cpf = $request->cpf;
         $membro->endereco = $request->endereco;
         $membro->cidade = $request->cidade;
         $membro->celular = $request->celular;
+
+        // guia Complemento
+        $membro->complemento = $request->complemento;
+        $membro->batismoAguas = $request->batismoAguas;
+        $membro->dataBatismoAguas = $request->dataBatismoAguas;
+        $membro->batismoES = $request->batismoES;
+        $membro->dataBatismoES = $request->dataBatismoES;
+        // radio button dizimista
+        // $membro->dizimista = 0 ou 1 ??
 
         $membro->save();
 

@@ -20,14 +20,14 @@
 
             <div>
                 <label for="situacao">Situação:</label>
-                <select name="situacao" id="situacao">
+                {{-- <select name="situacao" id="situacao">
                     <option value="0">Membro Ativo</option>
                     <option value="1">Congregado Ativo</option>
                     <option value="2">Disciplinado</option>
                     <option value="3">Desligado</option>
                     <option value="4">Mudou-se de igreja</option>
                     <option value="5">Óbito</option>
-                </select>
+                </select> --}}
             </div>
 
             <nav class="nav_tabs">
@@ -54,8 +54,9 @@
                             </div>
                             <div>
                                 <label for="celular">Celular:</label>
-                                <input type="tel" name="celular" id="celular" placeholder="049 98842-6048"
+                                <input type="tel" name="celular" id="celular" placeholder="049 9 8842-6048"
                                     pattern="[0-9]{3} [0-9]{1} [0-9]{4}-[0-9]{4}">
+                                    <small>Formato: 011 9 1122-3344</small>
                             </div>
                         </div>
                     </li>
