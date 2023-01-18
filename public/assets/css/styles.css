@@ -1,5 +1,8 @@
-/* @import "cadastro-membros.css";
+/* Formulário de cadastro de membros */
+@import "cadastro-membros.css";
+
 @import "exibir-membros.css";
+
 
 * {
     margin: 0;
@@ -27,7 +30,6 @@ aside {
     background: #c87d37;
     z-index: 1;
 }
-
 aside > nav {
     margin: 0 10%;
 
@@ -53,15 +55,16 @@ aside > nav > a {
 aside > nav > a:hover {
     background-color: white;
 }
-*/ main {
-    margin-left: 200px;
-    padding-left: 20px;
+
+main {
+    margin-left: 220px;
+    /* padding-left: 20px; */
 }
 
 .nav_tabs {
     width: 600px;
-    height: 400px;
-    margin: 100px auto;
+    height: 300px;
+    /* margin: 100px 0; */
     background: #fff;
     position: relative;
 }
@@ -74,23 +77,23 @@ aside > nav > a:hover {
     float: left;
 }
 
-.nav_tabs label {
-    width: 100px;
-    padding: 25px;
+.nav_tabs > ul > li > label {
+    width: 15vw;
+    padding: 0.6rem;
 
     display: block;
 
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
-    color: #fff;
+    color: #000;
 
+    background: #c9c7c7;
     cursor: pointer;
-
-    background: #0000ff;
 }
 
 .rd_tabs:checked ~ label {
-    background: #ff0000;
+    background: #525252;
+    color: white;
 }
 
 .rd_tabs {
@@ -98,16 +101,18 @@ aside > nav > a:hover {
 }
 
 .conteudo {
-    border-top: 5px solid #ffc0cb;
-    background: green;
     display: none;
     position: absolute;
     height: 320px;
-    /* largura do conteudo das guias*/
-    width: 70vw;
-    left: 5vw;
+    /* largura do conteudo */
+    width: 80vw;
+    background: #c83737;
 }
 
 .rd_tabs:checked ~ .conteudo {
     display: block;
+}
+
+.rd_tabs#tab-complemento:checked ~ .conteudo {
+    transform: translateX(-17vw);
 }

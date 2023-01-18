@@ -5,7 +5,7 @@
     width: 80vw;
 }
 
-#form-cadastro-membro div {
+#form-cadastro-membro > fieldset > div {
     margin-top: 10px;
     margin-left: 100px;
 }
