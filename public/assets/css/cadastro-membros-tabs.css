@@ -52,9 +52,6 @@
     
 }
 
-.rd_tabs:checked ~ .conteudo > div{
-    
-}
 .rd_tabs#tab-complemento:checked ~ .conteudo {
     transform: translateX(-15vw);
 }

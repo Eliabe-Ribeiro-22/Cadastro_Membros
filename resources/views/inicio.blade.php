@@ -3,10 +3,11 @@
 @section('titulo', 'Cadastro de Membros')
 
 @section('conteudo')
-    <h1>Cadastro de Membros</h1>
-    <a href="{{ route('create') }}">Novo Membro</a>
+    <h1 id="inicion-title">SCI - Sistema de Controle para Igreja</h1>
+    <h2 id="inicio-subtitle">Secretaria</h2>
+    <a href="{{ route('create') }}" class="btn-novo-membro">Novo Membro</a>
 
-    <form action="{{ route('show', ['id' => '3']) }}" method="post">
+    <form action="{{ route('show', ['id' => '3']) }}" method="post" id="form-pesquisar-membro">
         {{-- Corrigir este form, para que quando o usuário digitar e apertar em enviar, seja buscado pelo nome dele e não pelo ID --}}
         @csrf
         <label for="pesquisar-membro">Digite o nome do membro que deseja pesquisar:</label>
@@ -14,7 +15,7 @@
         <input type="submit" value="pesquisar">
     </form>
 
-    {{-- Exibir alunos cadastrados, utilizando diretiva @foreach--}}
+    {{-- Exibir alunos cadastrados, utilizando diretiva @foreach --}}
     <h4>Membros Cadastrados:</h4>
     <div id="exibir-membros">
         <button id="nome">Nome</button>
