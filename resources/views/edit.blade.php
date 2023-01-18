@@ -3,23 +3,23 @@
 @section('titulo', 'Alterando: ' . $membro->nome)
 
 @section('conteudo')
-    {{ $membro->id }}
-    <form action="{{ route('edit', ['id' => $membro->id]) }}" method="post">
+    <form action="{{ route('update', ['id' => $membro->id]) }}" method="post">
         @csrf
+        @method('PUT')
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" value="{{ $membro->nome }}">
 
         <label for="cpf">CPF(somente números):</label>
-        <input type="text" name="cpf" id="cpf" maxlength="11">
+        <input type="text" name="cpf" id="cpf" maxlength="11" value="{{ $membro->cpf }}">
 
         <label for="endereco">Endereço completo:</label>
-        <input type="text" name="endereco" id="endereco">
+        <input type="text" name="endereco" id="endereco" value="{{ $membro->endereco }}">
         <label for="cidade">Cidade:</label>
-        <input type="text" name="cidade" id="cidade">
+        <input type="text" name="cidade" id="cidade" value="{{ $membro->cidade }}">
 
         <label for="celular">Celular:</label>
         <input type="tel" name="celular" id="celular" placeholder="049 98842-6048"
-            pattern="[0-9]{3} [0-9]{1} [0-9]{4}-[0-9]{4}">
+            pattern="[0-9]{3} [0-9]{1} [0-9]{4}-[0-9]{4}" value="{{ $membro->celular }}">
         <input type="submit" value="enviar">
     </form>
     <br>

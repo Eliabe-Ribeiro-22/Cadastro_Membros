@@ -10,7 +10,8 @@ class Membro extends Model
     use HasFactory;
 
     protected $cast = [
-    'items' => 'array',
+        'items' => 'array',
     ];
-     
+
+    protected $fillable = ['nome', 'cpf', 'endereco', 'cidade', 'celular'];
 }

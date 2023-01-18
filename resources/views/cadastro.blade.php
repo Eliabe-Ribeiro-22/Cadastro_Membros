@@ -35,17 +35,17 @@
         <h2>{{ $membro->nome }}</h2>
         <h3>{{ $membro->cidade }}</h3>
         <h3>{{ $membro->celular }}</h3>
-        <button>Editar</button>
+        <form action="{{ route('show', ['id' => $membro->id]) }}" method="post">
+            @csrf
+            <input type="submit" value="Ver outras informações">
+        </form>
+
+        <a href="{{ route('edit', ['id' => $membro->id]) }}">Editar</a>
 
         <form action="{{ route('destroy', ['id' => $membro->id]) }}" method="post">
             @csrf
             @method('DELETE')
             <button>Excluir</button>
-        </form>
-
-        <form action="{{ route('show', ['id' => $membro->id]) }}" method="post">
-            @csrf
-            <input type="submit" value="Ver outras informações">
         </form>
         <br><br>
     @endforeach

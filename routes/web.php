@@ -28,3 +28,6 @@ Route::delete('/membros/{id}', [CadastroController::class, 'destroy'])->name('de
 
 // Exibir form de alteração
 Route::get('/membros/edit/{id}', [CadastroController::class, 'edit'])->name('edit');
+
+// Realizar alteração de um membro
+Route::put('/membros/edit/{id}', [CadastroController::class, 'update'])->name('update');
