@@ -17,7 +17,6 @@ class CadastroController extends Controller
 
     public function store(Request $request)
     {
-        
         $membro = new Membro();
 
         $membro->nome = $request->nome;
@@ -31,15 +30,24 @@ class CadastroController extends Controller
         return redirect('/')->with('msg', 'Membro cadastrado com sucesso!');
     }
 
-    public function show($id = 1){
+    public function show($id = 1)
+    {
         $membro = Membro::findOrFail($id);
 
         return view('show', ['membro' => $membro]);
     }
 
-    public function destroy($id){
+    public function destroy($id)
+    {
         Membro::findOrFail($id)->delete();
 
         return redirect('/')->with('msg', 'Membro excluído com sucesso!');
+    }
+
+    public function edit($id)
+    {
+        $membro = Membro::findOrFail($id);
+
+        return view('edit', ['membro' => $membro]);
     }
 }

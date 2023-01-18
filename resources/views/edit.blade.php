@@ -1,9 +1,10 @@
 @extends('main')
 
-@section('titulo', 'Cadastro de Membros')
+@section('titulo', 'Alterando: ' . $membro->nome)
 
 @section('conteudo')
-    <form action="{{ route('store') }}" method="post">
+    {{ $membro->id }}
+    <form action="{{ route('edit', ['id' => $membro->id]) }}" method="post">
         @csrf
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome">
@@ -31,22 +32,10 @@
         <input type="search" name="pesquisar-membro" id="pesquisar-membro">
         <input type="submit" value="pesquisar">
     </form>
-    @foreach ($membros as $membro)
-        <h2>{{ $membro->nome }}</h2>
-        <h3>{{ $membro->cidade }}</h3>
-        <h3>{{ $membro->celular }}</h3>
-        <button>Editar</button>
 
-        <form action="{{ route('destroy', ['id' => $membro->id]) }}" method="post">
-            @csrf
-            @method('DELETE')
-            <button>Excluir</button>
-        </form>
-
-        <form action="{{ route('show', ['id' => $membro->id]) }}" method="post">
-            @csrf
-            <input type="submit" value="Ver outras informações">
-        </form>
-        <br><br>
-    @endforeach
+    <h2>{{ $membro->nome }}</h2>
+    <h3>{{ $membro->cpf }}</h3>
+    <h3>{{ $membro->endereco }}</h3>
+    <h3>{{ $membro->cidade }}</h3>
+    <h3>{{ $membro->celular }}</h3>
 @endsection

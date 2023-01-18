@@ -23,3 +23,8 @@ Route::post('/membros', [CadastroController::class, 'store'])->name('store');
 
 // Deletar um registro
 Route::delete('/membros/{id}', [CadastroController::class, 'destroy'])->name('destroy');
+
+// Editar
+
+// Exibir form de alteração
+Route::get('/membros/edit/{id}', [CadastroController::class, 'edit'])->name('edit');
