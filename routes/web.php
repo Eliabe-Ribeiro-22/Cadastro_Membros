@@ -13,22 +13,16 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\CadastroController;
 
-// Essa rota deveria ter o path: /membros
 Route::get('/', [CadastroController::class, 'index'])->name('index');
 
+// Formulário de cadastro de membros
 Route::get('/membros', [CadastroController::class, 'create'])->name('create');
-
-//  Salvar um registro
 Route::post('/membros', [CadastroController::class, 'store'])->name('store');
+Route::delete('/membros/{id}', [CadastroController::class, 'destroy'])->name('destroy');
 
 // Exibir pesquisa de um membro
 Route::post('/membros/{id}', [CadastroController::class, 'show'])->name('show');
 
-// Deletar um registro
-Route::delete('/membros/{id}', [CadastroController::class, 'destroy'])->name('destroy');
-
-// Exibir formulário de alteração
+// Formulário de alteração de membros
 Route::get('/membros/edit/{id}', [CadastroController::class, 'edit'])->name('edit');
-
-// Realizar alteração de um membro
 Route::put('/membros/edit/{id}', [CadastroController::class, 'update'])->name('update');

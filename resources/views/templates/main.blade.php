@@ -8,7 +8,6 @@
 
     {{-- Titulo da página --}}
     <title>@yield('titulo')</title>
-
     <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
 </head>
 

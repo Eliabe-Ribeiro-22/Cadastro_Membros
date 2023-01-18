@@ -17,15 +17,15 @@
     {{-- Exibir alunos cadastrados, utilizando foreach --}}
     <div>Membros Cadastrados:</div>
     <div id="exibir-membros">
-            {{-- nome deverá ter rowspan 2 ou 3 --}}
-            <button id="nome">Nome</button>
-            <button>Congregação</button>
-            <button>Nº Setor</button>
-            <button>Data de Nascimento</button>
-            <button>Situação</button>
-            <button>Naturalidade</button>
-            <button>Editar</button>
-            <button>Excluir</button>
+        {{-- nome deverá ter rowspan 2 ou 3 --}}
+        <button id="nome">Nome</button>
+        <button>Congregação</button>
+        <button>Nº Setor</button>
+        <button>Data de Nascimento</button>
+        <button>Situação</button>
+        <button>Naturalidade</button>
+        <button>Editar</button>
+        <button>Excluir</button>
         @foreach ($membros as $membro)
             <div>
                 <a>{{ $membro->nome }}</a>
@@ -46,3 +46,4 @@
             </div>
         @endforeach
     </div>
+@endsection

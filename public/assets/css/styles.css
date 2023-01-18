@@ -1,7 +1,55 @@
-@import 'tabela-exibir-membros.css';
+@import "tabela-exibir-membros.css";
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* nav */
+aside {
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 200px;
+
+    position: fixed;
+    display: flex;
+
+    /* semelhante ao siagweb */
+    /* background: #174e70; */
+    background: #c87d37;
+    z-index: 1;
+}
+
+aside > nav {
+    margin: 0 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+aside > nav > a {
+    padding: 16px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+    background: #864101;
+    border-bottom: 1px solid #d7a678;
+    border-radius: 10px;
+}
+
+aside > nav > a:hover {
+    background-color: white;
+}
+
+main {
+    margin-left: 200px;
+    padding-left: 20px;
 }

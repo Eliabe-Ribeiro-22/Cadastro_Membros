@@ -1,13 +1,10 @@
 #exibir-membros {
     width: 90vw;
 
-    background: red;
-
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     /* gap: 40px; */
 }
 
 #exibir-membros button {
-    background: yellow;
 }
