@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CadastroController;
 
 Route::get('/', [CadastroController::class, 'index'])->name('index');
-Route::post('/membros/{id?}', [CadastroController::class, 'show'])->name('show');
+Route::post('/membros/{id}', [CadastroController::class, 'show'])->name('show');
 
 Route::post('/membros', [CadastroController::class, 'store'])->name('store');

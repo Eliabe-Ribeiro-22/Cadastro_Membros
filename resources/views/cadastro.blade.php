@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="/membros" method="post">
+    <form action="{{ route('store') }}" method="post">
         @csrf
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome">
@@ -42,6 +42,14 @@
         <h3>{{ $membro->endereco }}</h3>
         <h3>{{ $membro->cidade }}</h3>
         <h3>{{ $membro->celular }}</h3>
+        <button>Editar</button>
+        <button>Excluir</button>
+        <button>{{ $membro->id }}</button>
+        <form action="{{ route('show', ['id' => $membro->id]) }}" method="post">
+            @csrf
+            <input type="submit" value="Ver outras informações">
+        </form>
+        
         <br>
         <br>
     @endforeach

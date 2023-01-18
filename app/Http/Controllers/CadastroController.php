@@ -17,6 +17,7 @@ class CadastroController extends Controller
 
     public function store(Request $request)
     {
+        echo "<script>alert('entrou aqui') </script>";
         $membro = new Membro();
 
         $membro->nome = $request->nome;
