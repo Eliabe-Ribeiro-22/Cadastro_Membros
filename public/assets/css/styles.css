@@ -1,4 +1,4 @@
-@import "cadastro-membros.css";
+/* @import "cadastro-membros.css";
 @import "exibir-membros.css";
 
 * {
@@ -53,8 +53,7 @@ aside > nav > a {
 aside > nav > a:hover {
     background-color: white;
 }
-
-main {
+*/ main {
     margin-left: 200px;
     padding-left: 20px;
 }
@@ -62,7 +61,11 @@ main {
 .nav_tabs {
     width: 600px;
     height: 400px;
+    margin: 100px auto;
+    background: #fff;
+    position: relative;
 }
+
 .nav_tabs > ul {
     list-style: none;
 }
@@ -74,19 +77,35 @@ main {
 .nav_tabs label {
     width: 100px;
     padding: 25px;
-    background: blue;
+
     display: block;
-    color: #fff;
-    cursor: pointer;
+
+    font-size: 16px;
     text-align: center;
+    color: #fff;
+
+    cursor: pointer;
+
+    background: #0000ff;
+}
+
+.rd_tabs:checked ~ label {
+    background: #ff0000;
 }
 
 .rd_tabs {
     display: none;
 }
 
-.rd_tabs:checked ~ label {
-    background: #ff0000;
+.conteudo {
+    border-top: 5px solid #ffc0cb;
+    background: green;
+    display: none;
+    position: absolute;
+    height: 320px;
+    /* largura do conteudo das guias*/
+    width: 70vw;
+    left: 5vw;
 }
 
 .rd_tabs:checked ~ .conteudo {
