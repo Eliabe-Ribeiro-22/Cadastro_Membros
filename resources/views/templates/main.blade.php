@@ -9,6 +9,8 @@
     {{-- Titulo da página --}}
     <title>@yield('titulo')</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    {{-- Colorir tabela de visualização de membros --}}
+    <script type="text/javascript" src="/assets/js/exibir-membros.js" defer></script>
 </head>
 
 <body>
