@@ -12,7 +12,11 @@ class CadastroController extends Controller
     public function index()
     {
         $membros = Membro::All();
-        return view('cadastro', ['membros' => $membros]);
+        return view('inicio', ['membros' => $membros]);
+    }
+    
+    public function create(){
+        return view('cadastro-membros.cadastro');
     }
 
     public function store(Request $request)
@@ -34,7 +38,7 @@ class CadastroController extends Controller
     {
         $membro = Membro::findOrFail($id);
 
-        return view('show', ['membro' => $membro]);
+        return view('cadastro-membros.show', ['membro' => $membro]);
     }
 
     public function destroy($id)
@@ -48,7 +52,7 @@ class CadastroController extends Controller
     {
         $membro = Membro::findOrFail($id);
 
-        return view('edit', ['membro' => $membro]);
+        return view('cadastro-membros.edit', ['membro' => $membro]);
     }
 
     public function update(Request $request){

@@ -16,11 +16,13 @@ use App\Http\Controllers\CadastroController;
 // Essa rota deveria ter o path: /membros
 Route::get('/', [CadastroController::class, 'index'])->name('index');
 
-// Exibir pesquisa de um membro
-Route::post('/membros/{id}', [CadastroController::class, 'show'])->name('show');
+Route::get('/membros', [CadastroController::class, 'create'])->name('create');
 
 //  Salvar um registro
 Route::post('/membros', [CadastroController::class, 'store'])->name('store');
+
+// Exibir pesquisa de um membro
+Route::post('/membros/{id}', [CadastroController::class, 'show'])->name('show');
 
 // Deletar um registro
 Route::delete('/membros/{id}', [CadastroController::class, 'destroy'])->name('destroy');
