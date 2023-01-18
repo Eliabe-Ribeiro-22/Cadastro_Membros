@@ -3,12 +3,17 @@
 ## To Do
 
 - Adicionar todos os campos requisitados pelo cliente, adptando as respectivas rotas de salvar, alterar, pesquisar e exibir registros
-- Estilização das páginas e formulários
+- Estilização das páginas do site
 - Refatoração da área de pesquisa de membros
+- Estilização da tabela com registros dos membros
+  - 1 linha de cada cor: pêsssego e cinza
 
 ## Doing
 
-- Estilização da tabela com registros dos membros
+- Estilização dos formulários:
+  - cadastro
+  - alteração
+  - pesquisa
 
 ## Done
 

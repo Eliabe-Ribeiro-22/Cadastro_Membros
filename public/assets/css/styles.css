@@ -58,3 +58,37 @@ main {
     margin-left: 200px;
     padding-left: 20px;
 }
+
+.nav_tabs {
+    width: 600px;
+    height: 400px;
+}
+.nav_tabs > ul {
+    list-style: none;
+}
+
+.nav_tabs > ul > li {
+    float: left;
+}
+
+.nav_tabs label {
+    width: 100px;
+    padding: 25px;
+    background: blue;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.rd_tabs {
+    display: none;
+}
+
+.rd_tabs:checked ~ label {
+    background: #ff0000;
+}
+
+.rd_tabs:checked ~ .conteudo {
+    display: block;
+}

@@ -1,7 +1,8 @@
+@import "cadastro-membros-tabs.css";
+
 #form-cadastro-membro {
     margin: 0 auto;
     width: 80vw;
-    
 }
 
 #form-cadastro-membro div {
@@ -16,6 +17,9 @@
 #form-cadastro-membro > fieldset > div input {
     padding: 5px 10px;
     font: 16px Helvetica, Arial, sans-serif;
+
+    border: 1px solid #999;
+    border-radius: 5px;
 }
 
 #form-cadastro-membro > fieldset > div #input-nome {
