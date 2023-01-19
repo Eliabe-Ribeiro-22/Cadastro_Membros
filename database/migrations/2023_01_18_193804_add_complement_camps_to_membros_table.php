@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('dataBatismoAguas')->nullable();
             $table->string('batismoES')->nullable();
             $table->string('dataBatismoES')->nullable();
+            $table->string('observacoes')->nullable();
         });
     }
 
@@ -35,6 +36,7 @@ return new class extends Migration
             $table->dropColumn('dataBatismoAguas');
             $table->dropColumn('batismoES');
             $table->dropColumn('dataBatismoES');
+            $table->dropColumn('observacoes');
         });
     }
 };

@@ -15,10 +15,9 @@ return new class extends Migration {
         Schema::create('membros', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('cpf');
-            $table->string('endereco');
-            $table->string('cidade');
-            $table->string('celular');
+            $table->string('situacao');
+            $table->string('congregacao');
+            $table->string('setor');
             $table->timestamps();
         });
     }
