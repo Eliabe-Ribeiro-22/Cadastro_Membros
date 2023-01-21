@@ -10,6 +10,7 @@
 
 <div>
     <label for="situacao">Situação:</label>
+    <input type="text" name="situacao" id="situacao">
     {{-- <select name="situacao" id="situacao">
         <option value="0">Membro Ativo</option>
         <option value="1">Congregado Ativo</option>

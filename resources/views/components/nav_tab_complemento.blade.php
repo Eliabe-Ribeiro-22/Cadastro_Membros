@@ -32,4 +32,9 @@
         <input type="radio" name="dizimista" id="0">Não
         <input type="radio" name="dizimista" id="1">Sim
     </div>
+
+    <div>
+        <label for="observacoes">Observações: </label>
+        <textarea name="observacoes" id="observacoes" cols="30" rows="10"></textarea>
+    </div>
 </div>
