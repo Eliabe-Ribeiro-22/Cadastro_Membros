@@ -29,8 +29,8 @@
 
     <div>
         <label for="dizimista">Dizimista</label>
-        <input type="radio" name="dizimista" id="0">Não
-        <input type="radio" name="dizimista" id="1">Sim
+        {{-- <input type="radio" name="dizimista" id="0">Não
+        <input type="radio" name="dizimista" id="1">Sim --}}
     </div>
 
     <div>

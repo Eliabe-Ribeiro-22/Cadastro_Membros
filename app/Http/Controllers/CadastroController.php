@@ -23,12 +23,40 @@ class CadastroController extends Controller
     {
         $membro = new Membro();
 
+        // Campos acima das guias do formulário
         $membro->nome = $request->nome;
-        // select situacao
+    
+        // situacao
         // $membro->situacao = 0 || 1 || 2 || 3 || 4 || 5;
+        $membro->situacao = $request->situacao;
+        $membro->congregacao = $request->congregacao;
+        $membro->setor = $request->setor;        
 
         // Guia Dados Cadastrais
         $membro->cpf = $request->cpf;
+        $membro->rg = $request->rg;
+        $membro->naturalidade = $request->naturalidade;
+        // $membro->dataNascimento = $request->dataNascimento;
+        $membro->nacionalidade = $request->nacionalidade;
+        $membro->profissao = $request->profissao;
+        $membro->sexo = $request->sexo;
+        $membro->rg = $request->rg;
+        $membro->cpf = $request->cpf;
+        $membro->rg = $request->rg;
+        $membro->cpf = $request->cpf;
+        $membro->rg = $request->rg;
+        $membro->cpf = $request->cpf;
+        $membro->rg = $request->rg;
+        $membro->cpf = $request->cpf;
+        $membro->rg = $request->rg;
+        $membro->rg = $request->rg;
+        $membro->cpf = $request->cpf;
+        $membro->rg = $request->rg;
+        $membro->cpf = $request->cpf;
+        $membro->rg = $request->rg;
+
+
+
         $membro->endereco = $request->endereco;
         $membro->cidade = $request->cidade;
         $membro->celular = $request->celular;
