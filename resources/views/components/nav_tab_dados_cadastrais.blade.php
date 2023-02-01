@@ -19,7 +19,7 @@
 
     <div>
         <label for="dataNascimento">dataNascimento</label>
-        <input type="text" name="dataNascimento" id="dataNascimento" required>
+        {{-- <input type="text" name="dataNascimento" id="dataNascimento" required> --}}
     </div>
     <div>
         <label for="nacionalidade">Nacionalidade</label>
@@ -96,7 +96,7 @@
 
     <div>
         <label for="celular">Telefone fixo:</label>
-        <input type="tel" name="celular" id="celular" placeholder="049 9 8842-6048" pattern="[0-9]{4}-[0-9]{4}">
+        <input type="tel" name="telefone" id="celular" placeholder="049 9 8842-6048" pattern="[0-9]{4}-[0-9]{4}">
         <small>Formato: 3222-5566</small>
     </div>
 

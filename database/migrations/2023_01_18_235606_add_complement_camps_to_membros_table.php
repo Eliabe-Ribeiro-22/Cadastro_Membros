@@ -20,7 +20,9 @@ return new class extends Migration
             $table->string('dataBatismoAguas')->nullable();
             $table->string('batismoES')->nullable();
             $table->string('dataBatismoES')->nullable();
+            // $table->boolean('dizimista');
             $table->string('observacoes')->nullable();
+            $table->timestamps();
         });
     }
 

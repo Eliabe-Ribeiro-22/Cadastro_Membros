@@ -18,7 +18,6 @@ return new class extends Migration {
             $table->string('situacao');
             $table->string('congregacao');
             $table->string('setor');
-            $table->timestamps();
         });
     }
 
