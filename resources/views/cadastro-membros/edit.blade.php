@@ -1,8 +1,8 @@
-@extends('templates.main')
+{{-- @extends('templates.main')
 
 @section('titulo', 'Alterando: ' . $membro->nome)
 
-@section('conteudo')
+@section('conteudo') --}}
     <h1>Alterando membro: {{ $membro->nome }}</h1>
     <form action="{{ route('update', ['id' => $membro->id]) }}" method="post">
         @csrf
@@ -23,7 +23,7 @@
                 </li>
             </ul>
         </nav>
-        echo "<script>alert()</script>";
+
         <div class="button-actions">
             <button type="submit">&#128190; Cadastrar</button>
             <button>Listagem</button>
@@ -33,4 +33,6 @@
         <input type="submit" value="alterar">
     </form>
 
-@endsection
+{{-- Informações já cadastradas do membro selecionado --}}
+    <x-informacoes_membro :membro="$membro"/>    
+{{-- @endsection --}}
