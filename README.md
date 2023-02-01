@@ -48,4 +48,8 @@ Laravel, MySQL, CSS, HTML,
 
 #### 01/02 - Quarta-feira - Eliabe
 
-Refatoração do CRUD - Create - Com isso, todos os campos do cadastro de membros possuem corretamente a funcionalidade de cadastramento.
+- Refatoração do CRUD - Create - Com isso, todos os campos do cadastro de membros possuem corretamente a funcionalidade de cadastramento.
+
+----
+
+- Refatoração do CRUD - Read - As principais informações dos membros são exibidos na página inicial do site, de acordo com as requisições do cliente.

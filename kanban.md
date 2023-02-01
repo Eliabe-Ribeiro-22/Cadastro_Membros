@@ -18,7 +18,7 @@
   - salvar -> OK
   - alterar
   - pesquisar
-  - exibir registros
+  - exibir registros -> OK
 
 ## Done
 
@@ -35,3 +35,7 @@
 - Desenvolvimento do CRUD - Delete - Implementado funcionalidade de exclusão de membros.
 
 - Desenvolvimento do CRUD - Update - Implementar funcionalidade de alteração de membros.
+
+- Refatoração do CRUD - Create - Com isso, todos os campos do cadastro de membros possuem corretamente a funcionalidade de cadastramento.
+
+- Refatoração do CRUD - Read - As principais informações dos membros são exibidos na página inicial do site
