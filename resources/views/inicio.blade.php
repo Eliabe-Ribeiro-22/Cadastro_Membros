@@ -23,16 +23,22 @@
         <button>Nº Setor</button>
         <button>Data de Nascimento</button>
         <button>Situação</button>
-        <button>Naturalidade</button>
+        <button>Celular</button>
         <button>Editar</button>
         <button>Excluir</button>
         @foreach ($membros as $membro)
             <a>{{ $membro->nome }}</a>
             <a>{{ $membro->cidade }}</a>
-            <a>{{ $membro->celular }}</a>
-            <a>{{ $membro->cidade }}</a>
-            <a>{{ $membro->cidade }}</a>
-            <a>{{ $membro->cidade }}</a>
+            <a>{{ $membro->setor }}</a>
+            <a>--------------------</a>
+            <a>{{ $membro->situacao }}</a>
+            <a>
+                @if ($membro->celular)
+                    {{ $membro->celular }}
+                @else
+                    <p>não informado</p>
+                @endif
+            </a>
             <a href="{{ route('edit', ['id' => $membro->id]) }}">
                 &#128393;
             </a>
