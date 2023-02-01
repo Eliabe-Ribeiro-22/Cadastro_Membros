@@ -30,13 +30,13 @@
             <a>{{ $membro->nome }}</a>
             <a>{{ $membro->cidade }}</a>
             <a>{{ $membro->setor }}</a>
-            <a>--------------------</a>
+            <a>Não informado</a>
             <a>{{ $membro->situacao }}</a>
             <a>
                 @if ($membro->celular)
                     {{ $membro->celular }}
                 @else
-                    <p>não informado</p>
+                    Não informado
                 @endif
             </a>
             <a href="{{ route('edit', ['id' => $membro->id]) }}">

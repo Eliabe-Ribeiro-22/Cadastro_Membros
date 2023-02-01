@@ -91,7 +91,7 @@ class CadastroController extends Controller
 
     public function update(Request $request)
     {
-        Membro::findOrFail($request->id)->update($request->all());
+        Membro::findOrFail($request->id)->update($request->all());    
         return redirect('/')->with('msg', 'Membro alterado com sucesso!');
     }
 }

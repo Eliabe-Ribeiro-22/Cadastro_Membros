@@ -7,37 +7,30 @@
     <form action="{{ route('update', ['id' => $membro->id]) }}" method="post">
         @csrf
         @method('PUT')
+        <legend>Cadastrar novo membro</legend>
+        {{-- 5 primeiros campos do form, e que ficam acima das guias --}}
+        <x-edit.campos_above_tab />
+
+        <nav class="nav_tabs">
+            <ul>
+                <li>
+                    {{-- Tab(Guia) Dados Cadastrais --}}
+                    <x-edit.nav_tab_dados_cadastrais />
+                </li>
+                <li>
+                    {{-- Tab(Guia) Complemento --}}
+                    <x-edit.nav_tab_complemento />
+                </li>
+            </ul>
+        </nav>
+        echo "<script>alert()</script>";
+        <div class="button-actions">
+            <button type="submit">&#128190; Cadastrar</button>
+            <button>Listagem</button>
+            <button id="pesquisar-membro">Pesquisar membro</button>
+        </div>
+        </fieldset>
         <input type="submit" value="alterar">
     </form>
 
-    {{-- All data of membro --}}
-    {{-- Campos acima das guias --}}
-    <h2>{{ $membro->nome }}</h2>
-    <h3>{{ $membro->situacao }}</h3>
-    <h3>{{ $membro->congregacao }}</h3>
-    <h3>{{ $membro->setor }}</h3>
-
-    {{-- Guia dados cadastrais --}}
-    <h3>{{ $membro->cpf }}</h3>
-    <h3>{{ $membro->rg }}</h3>
-    <h3>{{ $membro->naturalidade }}</h3>
-    <h3>{{ $membro->nacionalidade }}</h3>
-    <h3>{{ $membro->profissao }}</h3>
-    <h3>{{ $membro->sexo }}</h3>
-    <h3>{{ $membro->estadoCivil }}</h3>
-    <h3>{{ $membro->grauInstrucao }}</h3>
-    <h3>{{ $membro->pai }}</h3>
-    <h3>{{ $membro->mae }}</h3>
-    <h3>{{ $membro->endereco }}</h3>
-    <h3>{{ $membro->numeroLar }}</h3>
-    <h3>{{ $membro->complementoEndereco }}</h3>
-    <h3>{{ $membro->bairro }}</h3>
-    <h3>{{ $membro->cidade }}</h3>    
-    <h3>{{ $membro->uf }}</h3>
-    <h3>{{ $membro->cep }}</h3>
-    <h3>{{ $membro->telefone }}</h3>
-    <h3>{{ $membro->celular }}</h3>
-    <h3>{{ $membro->email }}</h3>
-    
-    {{-- Guia complemento --}}
 @endsection
