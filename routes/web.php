@@ -23,4 +23,4 @@ use App\Http\Controllers\PDFController;
 Route::get('listagem', [PDFController::class, 'listagem_membros']);
 
 // Carteirinhas de Membros
-Route::get('carteirinhas', [PDFController::class, 'carteirinha_membros']);
+Route::get('carteirinhas', [PDFController::class, 'carteirinha_membros'])->name('carteirinhas');
