@@ -25,12 +25,12 @@
         </nav>
 
         <div class="button-actions">
-            <button type="submit">&#128190; Cadastrar</button>
+            <button type="submit">&#128190; Salvar Alterações</button>
             <button>Listagem</button>
             <button id="pesquisar-membro">Pesquisar membro</button>
         </div>
         </fieldset>
-        <input type="submit" value="alterar">
+        {{-- <input type="submit" value="alterar"> --}}
     </form>
 
 {{-- Informações já cadastradas do membro selecionado --}}

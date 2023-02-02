@@ -1,5 +1,5 @@
 {{-- Tab Dados Cadastrais --}}
-<input type="radio" name="tabs" class="rd_tabs" id="tab-dados-cadastrais" checked>
+{{-- <input type="radio" name="tabs" class="rd_tabs" id="tab-dados-cadastrais" checked> --}}
 <label for="tab-dados-cadastrais">Dados Cadastrais</label>
 <div class="conteudo">
     <div>
