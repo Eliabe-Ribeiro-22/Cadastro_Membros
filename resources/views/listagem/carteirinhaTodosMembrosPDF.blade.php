@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Cartões de Membro</title>
     <style>
         * {
             margin: 0;
@@ -14,43 +14,77 @@
             font-family: sans-serif;
         }
 
+        /* Quadrado que exibe os 4 cartões de membro de uma folha */
         .show-cards {
             margin: 10px 10vw;
             padding: 0;
-            
-            width: 80vw;
+
+            /* width: 80vw; */
             background: yellow;
 
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-row-gap: 30px;
+            grid-row-gap: 35px;
         }
 
         .card {
             margin: 0;
             padding: 0;
-            
-            background-image: url("https://www.gov.br/aeb/pt-br/assuntos/noticias/imagens-de-satelite-auxiliam-na-analisa-de-evolucao-das-nuvens/nuvens-2.jpeg");
+
+            background-image: url('/assets/img/nuvens-bg-cartao.jpeg');
             background-size: cover;
             width: 32vw;
             height: 13rem;
         }
 
-        .front{
+        .front {
             margin-left: 80px;
         }
 
-        .header-card{
+        /* cabeçalho padrão da frente do cartão */
+        .header-card {
             margin-top: 3px;
             text-align: center;
+            overflow-wrap: break-word;
         }
 
-        .header-card > p {
+        .header-card>p {
             font-size: 13px;
         }
-        .header-card > h4#title{
+
+        .header-card>h4#title {
             text-decoration: underline;
             font-weight: bold;
+        }
+
+        /* Corpo do cartão */
+        .body-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        
+        .body-card > span{
+
+        }
+
+        .body-card> :is(.nome, .congregation) {
+            grid-column: span 4;
+            background: blue;
+        }
+
+        .body-card>.mission {
+            grid-column: span 3;
+        }
+
+        .body-card>:is(.baptism-date, .emission) {
+            grid-column: span 2;
+        }
+
+        .body-card>span {
+            margin: 2px;
+            background: white;
+            border: 0.5px solid orange;
+            border-radius: 2px;
         }
     </style>
 </head>
@@ -69,6 +103,16 @@
                             CAMPO BELO DO SUL - SC - (49) 3249-1036
                         </p>
                         <h4 id="title">Cartão de Membro</h4>
+                    </div>
+
+                    <div class="body-card">
+                        <span class="nome">Nome:</span>
+                        <span class="mission">Cargo:</span>
+                        <span>Código ID</span>
+                        <span class="baptism-date">Data Batismo:</span>
+                        <span class="emission">Emissão:</span>
+                        <span class="congregation">Congregação:</span>
+
                     </div>
                 </div>
                 <div class="card back">
