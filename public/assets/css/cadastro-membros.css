@@ -67,6 +67,6 @@ select {
 #form-cadastro-membro
     > fieldset
     > div.button-actions
-    > button#pesquisar-membro {
+    > button#go_to-pesquisar-membro {
     width: 10rem;
 }

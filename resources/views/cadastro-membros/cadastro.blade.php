@@ -26,7 +26,7 @@
             <div class="button-actions">
                 <button type="submit">&#128190; Cadastrar</button>
                 <button>Listagem</button>
-                <button id="pesquisar-membro">Pesquisar membro</button>
+                <button id="go_to-pesquisar-membro">Pesquisar membro</button>
             </div>
         </fieldset>
     </form>

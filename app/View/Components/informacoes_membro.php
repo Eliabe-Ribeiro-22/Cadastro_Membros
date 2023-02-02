@@ -27,6 +27,6 @@ class informacoes_membro extends Component
      */
     public function render()
     {
-        return view('components.informacoes_membro');
+        return view('components.edit.informacoes_membro');
     }
 }

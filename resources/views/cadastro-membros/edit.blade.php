@@ -28,12 +28,12 @@
             <div class="button-actions">
                 <button type="submit">&#128190; Salvar Alterações</button>
                 <button>Listagem</button>
-                <button id="pesquisar-membro">Pesquisar membro</button>
+                <button id="go_to-pesquisar-membro">Pesquisar membro</button>
             </div>
         </fieldset>
         {{-- <input type="submit" value="alterar"> --}}
     </form>
 
     {{-- Informações já cadastradas do membro selecionado --}}
-    <x-informacoes_membro :membro="$membro" />
+    <x-edit.informacoes_membro :membro="$membro" />
 @endsection

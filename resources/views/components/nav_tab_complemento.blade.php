@@ -1,5 +1,5 @@
 {{-- Tab Complemento --}}
-<input type="radio" name="tabs" class="rd_tabs" id="tab-complemento">
+<input type="radio" name="tabs" class="rd_tabs" id="tab-complemento"/>
 <label for="tab-complemento">Complemento</label>
 <div class="conteudo">
     <div>
