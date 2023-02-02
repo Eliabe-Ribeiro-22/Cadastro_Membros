@@ -16,6 +16,11 @@ Route::post('/membros/{id}', [CadastroController::class, 'show'])->name('show');
 Route::get('/membros/edit/{id}', [CadastroController::class, 'edit'])->name('edit');
 Route::put('/membros/edit/{id}', [CadastroController::class, 'update'])->name('update');
 
-// PDF
+// Impressão de PDF
 use App\Http\Controllers\PDFController;
-Route::get('pdf', [PDFController::class, 'listarMembros']);
+
+// Listagem de todos os Membros e congregados
+Route::get('listagem', [PDFController::class, 'listagem_membros']);
+
+// Carteirinhas de Membros
+Route::get('carteirinhas', [PDFController::class, 'carteirinha_membros']);
