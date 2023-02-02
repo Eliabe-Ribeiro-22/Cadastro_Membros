@@ -53,3 +53,7 @@ Laravel, MySQL, CSS, HTML,
 ----
 
 - Refatoração do CRUD - Read - As principais informações dos membros são exibidos na página inicial do site, de acordo com as requisições do cliente.
+
+----
+
+- Refatoração do CRUD - Update - Com isso, todos os campos do cadastro de membros possuem corretamente a funcionalidade de alteração.
