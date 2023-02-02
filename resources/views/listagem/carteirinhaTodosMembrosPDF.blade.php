@@ -69,7 +69,7 @@
         .body-card {
             margin: 0 14px;
             margin-top: 13px;
-            
+
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-column-gap: 7px;
@@ -80,12 +80,12 @@
             height: 22px;
 
             display: flex;
-            
+
             align-items: center;
-            
+
             background: #fff;
-            font-size: 16px;            
-            
+            font-size: 16px;
+
             border: 0.000001mm solid #c2c2c2;
             border-radius: 2px;
         }
@@ -107,7 +107,7 @@
 <body>
     <main>
         <div class="show-cards">
-            @for ($i = 0; $i < 7; $i++)
+            @foreach ($membros as $membro)
                 <div class="card front">
                     <div class="header-card">
                         <h4>IGREJA EVANGÉLICA ASSEMBLEIA DE DEUS
@@ -121,23 +121,22 @@
                     </div>
 
                     <div class="body-card">
-                        <span class="nome">Nome: <b>Eliabe Ribeiro Mota</b></span>
-                        <span class="mission">Cargo: <b>Membro</b></span>
-                        <span>ID: <b>1</b></span>
-                        <span class="baptism-date">Dt Batismo: <b>20/12/2016</b></span>
-                        <span class="emission">Emissão: <b>20/12/2016</b></span>
-                        <span class="congregation">Congregação: <b>Sede</b></span>
+                        <span class="nome">Nome: <b>{{ $membro->nome }}</b></span>
+                        <span class="mission">Cargo: <b>{{ $membro->situacao }}</b></span>
+                        <span>ID: <b>{{ $membro->id }}</b></span>
+                        <span class="baptism-date">Dt Batismo: <b>{{ $membro->dataBatismoAguas }}</b></span>
+                        <span class="emission">Emissão: <b>{{ date('d/m/Y') }}</b></span>
+                        <span class="congregation">Congregação: <b>{{ $membro->congregacao }}</b></span>
 
                     </div>
                 </div>
                 <div class="card back">
-                    ok
-                    <div>teste</div>
-                    {{ $i }}
+
                 </div>
-            @endfor
+            @endforeach
         </div>
         {{-- Objetivo: --}}
+
         {{--  8 vezes = 4 membros, pois é frente verso 
       aí quebra página
       e faz mais 8 vezes
@@ -147,10 +146,11 @@ Esse processo vai se repetir até que todos os membros sejam impressos
     foreach($membros as $membro){
         // for(8 membro)
         
-        for(i=1; i < 8; i++){
+        for ($i = 0; $i < 7; $i++){
             escreve os dados do membro no card-> frente e verso
         }
-        break page
+        
+        Quebrar para ir a nova página
     }
     --}}
     </main>
