@@ -44,6 +44,10 @@ E Aí ocorre um problema no MySQL, por não encotrar a coluna correspondente no 
 
 ### Possível solução:
 
-- Criar uma coluna no Banco de Dados chamada TABS, e devolver o name dos radiobuttons
+- Criar uma coluna no Banco de Dados chamada TABS, e devolver o name dos radiobuttons. 
+
+Mas tem um problema: Isto fere o princípio de Banco de Dados sempre o mais enxuto possível!
 
 - Trocar os radios buttons por checkboxes, e programar via JavaScript -> que quando apertar um checkbox, ele faz algo que deixa o checkbox selecionado -> mais escuro e o não -> mais claro
+
+Mas isso é trabalhoso, né?
