@@ -19,7 +19,6 @@
             margin: 10px 10vw;
             padding: 0;
 
-            /* width: 80vw; */
             background: yellow;
 
             display: grid;
@@ -34,7 +33,7 @@
             background-image: url('/assets/img/nuvens-bg-cartao.jpeg');
             background-size: cover;
             width: 32vw;
-            height: 13rem;
+            height: 14rem;
         }
 
         .front {
@@ -43,7 +42,16 @@
 
         /* cabeçalho padrão da frente do cartão */
         .header-card {
+            margin: 0% 4%;
+            width: 92%;
+
+            background: #ffffff;
+            opacity: 0.85;
+        }
+
+        .header-card> :is(h4, p) {
             margin-top: 3px;
+
             text-align: center;
             overflow-wrap: break-word;
         }
@@ -59,32 +67,39 @@
 
         /* Corpo do cartão */
         .body-card {
+            margin: 0 14px;
+            margin-top: 13px;
+            
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-        
-        .body-card > span{
-
-        }
-
-        .body-card> :is(.nome, .congregation) {
-            grid-column: span 4;
-            background: blue;
-        }
-
-        .body-card>.mission {
-            grid-column: span 3;
-        }
-
-        .body-card>:is(.baptism-date, .emission) {
-            grid-column: span 2;
+            grid-column-gap: 7px;
+            grid-row-gap: 13px;
         }
 
         .body-card>span {
-            margin: 2px;
-            background: white;
-            border: 0.5px solid orange;
+            height: 22px;
+
+            display: flex;
+            
+            align-items: center;
+            
+            background: #fff;
+            font-size: 16px;            
+            
+            border: 0.000001mm solid #c2c2c2;
             border-radius: 2px;
+        }
+
+        .body-card> :is(span.nome, span.congregation) {
+            grid-column: span 4;
+        }
+
+        .body-card>span.mission {
+            grid-column: span 3;
+        }
+
+        .body-card>:is(span.baptism-date, span.emission) {
+            grid-column: span 2;
         }
     </style>
 </head>
@@ -106,12 +121,12 @@
                     </div>
 
                     <div class="body-card">
-                        <span class="nome">Nome:</span>
-                        <span class="mission">Cargo:</span>
-                        <span>Código ID</span>
-                        <span class="baptism-date">Data Batismo:</span>
-                        <span class="emission">Emissão:</span>
-                        <span class="congregation">Congregação:</span>
+                        <span class="nome">Nome: <b>Eliabe Ribeiro Mota</b></span>
+                        <span class="mission">Cargo: <b>Membro</b></span>
+                        <span>ID: <b>1</b></span>
+                        <span class="baptism-date">Dt Batismo: <b>20/12/2016</b></span>
+                        <span class="emission">Emissão: <b>20/12/2016</b></span>
+                        <span class="congregation">Congregação: <b>Sede</b></span>
 
                     </div>
                 </div>
