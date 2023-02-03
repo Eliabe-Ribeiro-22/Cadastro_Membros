@@ -4,7 +4,10 @@
     margin: 0 auto;
     width: 80vw;
 }
-
+fieldset {
+    position: absolute;
+    height: 1300px;
+}
 :is(#form-cadastro-membro > fieldset) > div:has(input),
 select {
     margin-top: 10px;

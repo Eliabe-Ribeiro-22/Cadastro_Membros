@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('cpf');
             $table->string('rg');
             $table->string('naturalidade');
-            // $table->date('dataNascimento');
+            $table->dateTime('dataNascimento');
             $table->string('nacionalidade');
             $table->string('profissao');
             $table->string('sexo');

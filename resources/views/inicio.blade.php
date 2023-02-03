@@ -33,7 +33,7 @@
                 <a>{{ $membro->nome }}</a>
                 <a>{{ $membro->cidade }}</a>
                 <a>{{ $membro->setor }}</a>
-                <a>Não informado</a>
+                <a>{{ date('d/m/Y', strtotime( $membro->dataNascimento )) }}</a>
                 <a>{{ $membro->situacao }}</a>
                 <a>
                     @if ($membro->celular)

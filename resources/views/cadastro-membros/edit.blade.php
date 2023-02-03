@@ -33,7 +33,7 @@
         </fieldset>
         {{-- <input type="submit" value="alterar"> --}}
     </form>
-
+    {{-- problema de styles: o fieldset deveria aumentar o tanto das guias --}}
     {{-- Informações já cadastradas do membro selecionado --}}
     <x-edit.informacoes_membro :membro="$membro" />
 @endsection

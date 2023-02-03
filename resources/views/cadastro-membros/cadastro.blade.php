@@ -8,17 +8,17 @@
         <fieldset>
             <legend>Cadastrar novo membro</legend>
             {{-- 5 primeiros campos do form, e que ficam acima das guias --}}
-            <x-campos_above_tab/>
+            <x-store.campos_above_tab/>
             
             <nav class="nav_tabs">
                 <ul>
                     <li>
                         {{-- Tab(Guia) Dados Cadastrais --}}
-                        <x-nav_tab_dados_cadastrais/>
+                        <x-store.nav_tab_dados_cadastrais/>
                     </li>
                     <li>
                         {{-- Tab(Guia) Complemento --}}
-                        <x-nav_tab_complemento/>
+                        <x-store.nav_tab_complemento/>
                     </li>
                 </ul>
             </nav>

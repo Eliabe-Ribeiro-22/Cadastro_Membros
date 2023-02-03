@@ -15,11 +15,11 @@ return new class extends Migration
     public function up()
     {
         Schema::table('membros', function (Blueprint $table) {
-            $table->date('dataConversao')->nullable();
+            $table->dateTime('dataConversao')->nullable();
             $table->string('batismoAguas')->nullable();
-            $table->string('dataBatismoAguas')->nullable();
+            $table->dateTime('dataBatismoAguas')->nullable();
             $table->string('batismoES')->nullable();
-            $table->string('dataBatismoES')->nullable();
+            $table->dateTime('dataBatismoES')->nullable();
             // $table->boolean('dizimista');
             $table->string('observacoes')->nullable();
             $table->timestamps();

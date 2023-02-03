@@ -17,7 +17,8 @@
 
 <div>
     <label for="dataNascimento">dataNascimento</label>
-    {{-- <input type="text" name="dataNascimento" id="dataNascimento" required> --}}
+    <input type="date" name="dataNascimento" id="dataNascimento" required
+        value="{{ date('Y-m-d', strtotime($membro->dataNascimento)) }}">
 </div>
 <div>
     <label for="nacionalidade">Nacionalidade</label>

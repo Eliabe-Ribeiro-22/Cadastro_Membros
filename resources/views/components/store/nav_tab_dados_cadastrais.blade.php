@@ -19,7 +19,7 @@
 
     <div>
         <label for="dataNascimento">dataNascimento</label>
-        {{-- <input type="text" name="dataNascimento" id="dataNascimento" required> --}}
+        <input type="date" name="dataNascimento" id="dataNascimento" required>
     </div>
     <div>
         <label for="nacionalidade">Nacionalidade</label>

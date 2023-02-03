@@ -11,7 +11,8 @@ class CadastroController extends Controller
 {
     public function index()
     {
-        $membros = Membro::All();
+        // Exibir os registros em Ordem Alfabética
+        $membros = Membro::All()->sortBy('nome');
         return view('inicio', ['membros' => $membros]);
     }
 
@@ -37,7 +38,7 @@ class CadastroController extends Controller
         $membro->cpf = $request->cpf;
         $membro->rg = $request->rg;
         $membro->naturalidade = $request->naturalidade;
-        // $membro->dataNascimento = $request->dataNascimento;
+        $membro->dataNascimento = $request->dataNascimento;
         $membro->nacionalidade = $request->nacionalidade;
         $membro->profissao = $request->profissao;
         $membro->sexo = $request->sexo;
@@ -93,10 +94,9 @@ class CadastroController extends Controller
     {
         // OLD: Membro::findOrFail($request->id)->update($request->all());
         // Encontrar membro pelo ID
-        dd($id);
         $membro = Membro::find($id);
-
-        // Armazenar o ID
+        
+        // Armazenar o ID - mat consulta
         // $insertedId = $membro->id;
 
         // Campos acima das guias do formulário
@@ -111,7 +111,7 @@ class CadastroController extends Controller
         $membro->cpf = $request->cpf;
         $membro->rg = $request->rg;
         $membro->naturalidade = $request->naturalidade;
-        // $membro->dataNascimento = $request->dataNascimento;
+        $membro->dataNascimento = $request->dataNascimento;
         $membro->nacionalidade = $request->nacionalidade;
         $membro->profissao = $request->profissao;
         $membro->sexo = $request->sexo;
