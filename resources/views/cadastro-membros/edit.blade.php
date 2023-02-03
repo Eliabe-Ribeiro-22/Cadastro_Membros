@@ -10,17 +10,17 @@
         <fieldset>
             <legend>Cadastrar novo membro</legend>
             {{-- 5 primeiros campos do form, e que ficam acima das guias --}}
-            <x-edit.campos_above_tab />
+            <x-edit.campos_above_tab :membro="$membro"/>
 
             <nav class="nav_tabs">
                 <ul>
                     <li>
                         {{-- Tab(Guia) Dados Cadastrais --}}
-                        <x-edit.nav_tab_dados_cadastrais />
+                        <x-edit.nav_tab_dados_cadastrais :membro="$membro"/>
                     </li>
                     <li>
                         {{-- Tab(Guia) Complemento --}}
-                        <x-edit.nav_tab_complemento />
+                        <x-edit.nav_tab_complemento :membro="$membro"/>
                     </li>
                 </ul>
             </nav>

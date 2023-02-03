@@ -17,9 +17,6 @@
         /* Quadrado que exibe os 4 cartões de membro de uma folha */
         .show-cards {
             margin: 10px 10vw;
-            padding: 0;
-
-            background: yellow;
 
             display: grid;
             grid-template-columns: 50% 50%;
@@ -27,9 +24,6 @@
         }
 
         .card {
-            margin: 0;
-            padding: 0;
-
             background-image: url('/assets/img/nuvens-bg-cartao.jpeg');
             background-size: cover;
             width: 32vw;
