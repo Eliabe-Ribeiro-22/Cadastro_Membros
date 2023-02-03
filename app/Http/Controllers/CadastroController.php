@@ -65,7 +65,7 @@ class CadastroController extends Controller
         // radio button dizimista
         // $membro->dizimista = 0 ou 1 ??
         $membro->observacoes = $request->observacoes;
-        
+
         $membro->save();
         return redirect('/')->with('msg', 'Membro cadastrado com sucesso!');
     }
@@ -91,11 +91,11 @@ class CadastroController extends Controller
 
     public function update($id, Request $request)
     {
-        // OLD: Membro::findOrFail($request->id)->update($request->all());    
+        // OLD: Membro::findOrFail($request->id)->update($request->all());
         // Encontrar membro pelo ID
-        // dd($id);
-        $membro = Membro::find();
-        
+        dd($id);
+        $membro = Membro::find($id);
+
         // Armazenar o ID
         // $insertedId = $membro->id;
 
@@ -139,10 +139,9 @@ class CadastroController extends Controller
         // radio button dizimista
         // $membro->dizimista = 0 ou 1 ??
         $membro->observacoes = $request->observacoes;
-        
-        // Resalvando(atualizando) 
-        $membro->save();
 
+        // Resalvando(atualizando)
+        $membro->save();
 
         return redirect('/')->with('msg', 'Membro alterado com sucesso!');
     }
