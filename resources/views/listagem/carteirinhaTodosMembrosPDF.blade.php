@@ -13,6 +13,10 @@
             box-sizing: border-box;
             font-family: sans-serif;
         }
+        /* Quebra de página */
+         .page-break {
+            page-break-after: always;
+        }
 
         /* Quadrado que exibe os 4 cartões de membro de uma folha */
         .show-cards {
@@ -102,6 +106,7 @@
     <main>
         <div class="show-cards">
             @foreach ($membros as $membro)
+                {{ $loop }}
                 <div class="card front">
                     <div class="header-card">
                         <h4>IGREJA EVANGÉLICA ASSEMBLEIA DE DEUS
@@ -128,6 +133,8 @@
 
                 </div>
             @endforeach
+            <div class="page-break"></div>
+
         </div>
         {{-- Objetivo: --}}
 

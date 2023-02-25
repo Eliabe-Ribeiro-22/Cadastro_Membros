@@ -28,12 +28,15 @@
         <button>Editar</button>
         <button>Excluir</button>
 
-        @if (count($membros) > 0)
+        @if (!$membros || count($membros) <= 0)
+            <a>Não há membros cadastrados!</a>
+            <a href="{{ route('create') }}">Cadastre um agora mesmo</a>
+        @else
             @foreach ($membros as $membro)
                 <a>{{ $membro->nome }}</a>
                 <a>{{ $membro->cidade }}</a>
                 <a>{{ $membro->setor }}</a>
-                <a>{{ date('d/m/Y', strtotime( $membro->dataNascimento )) }}</a>
+                <a>{{ date('d/m/Y', strtotime($membro->dataNascimento)) }}</a>
                 <a>{{ $membro->situacao }}</a>
                 <a>
                     @if ($membro->celular)
@@ -53,9 +56,6 @@
                     </form>
                 </a>
             @endforeach
-        @else
-            <a>Não há membros cadastrados!</a>
-            <a href="{{ route('create') }}">Cadastre um agora mesmo</a>
         @endif
     </div>
 @endsection

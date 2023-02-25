@@ -11,8 +11,9 @@ class CadastroController extends Controller
 {
     public function index()
     {
+        $membros = null;
         // Exibir os registros em Ordem Alfabética
-        $membros = Membro::All()->sortBy('nome');
+        // $membros = Membro::All()->sortBy('nome');
         return view('inicio', ['membros' => $membros]);
     }
 
