@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Cadastro;
+
 class CadastrosController extends Controller
 {
     public function main()
     {
-        $membros = null;
         // Exibir os registros em Ordem Alfabética
-        // $membros = Membro::All()->sortBy('nome');
+        // $membros = Cadastro::All()->sortBy('nome');
+        $membros = Cadastro::All();
         return view('inicio', ['membros' => $membros]);
     }
 
@@ -22,7 +24,7 @@ class CadastrosController extends Controller
     public function store(Request $request)
     {
         // Faltou dizimista
-        $membro = new Membro();
+        $membro = new Cadastro();
 
         // Campos acima das guias do formulário
         $membro->nome = $request->nome;
@@ -66,33 +68,33 @@ class CadastrosController extends Controller
         $membro->observacoes = $request->observacoes;
 
         $membro->save();
-        return redirect('/')->with('msg', 'Membro cadastrado com sucesso!');
+        return redirect('/')->with('msg', 'Cadastro cadastrado com sucesso!');
     }
 
     public function show($id = 1)
     {
-        $membro = Membro::findOrFail($id);
+        $membro = Cadastro::findOrFail($id);
         return view('cadastro-membros.show', ['membro' => $membro]);
     }
 
     public function destroy($id)
     {
-        Membro::findOrFail($id)->delete();
-        return redirect('/')->with('msg', 'Membro excluído com sucesso!');
+        Cadastro::findOrFail($id)->delete();
+        return redirect('/')->with('msg', 'Cadastro excluído com sucesso!');
     }
 
     public function edit($id)
     {
-        $membro = Membro::findOrFail($id);
+        $membro = Cadastro::findOrFail($id);
 
         return view('cadastro-membros.edit', ['membro' => $membro]);
     }
 
     public function update($id, Request $request)
     {
-        // OLD: Membro::findOrFail($request->id)->update($request->all());
+        // OLD: Cadastro::findOrFail($request->id)->update($request->all());
         // Encontrar membro pelo ID
-        $membro = Membro::find($id);
+        $membro = Cadastro::find($id);
         
         // Armazenar o ID - mat consulta
         // $insertedId = $membro->id;
@@ -141,6 +143,6 @@ class CadastrosController extends Controller
         // Resalvando(atualizando)
         $membro->save();
 
-        return redirect('/')->with('msg', 'Membro alterado com sucesso!');
+        return redirect('/')->with('msg', 'Cadastro alterado com sucesso!');
     }
 }

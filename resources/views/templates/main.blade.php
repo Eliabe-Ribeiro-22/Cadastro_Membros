@@ -28,6 +28,8 @@
     <main>
         @if (session('msg'))
             <p>{{ session('msg') }}</p>
+        @elseif (session('error'))
+            <p>{{ session('msg') }}</p>
         @endif
         @yield('conteudo')
     </main>

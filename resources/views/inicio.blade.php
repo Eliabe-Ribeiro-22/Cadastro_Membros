@@ -7,7 +7,7 @@
     <h2 id="inicio-subtitle">Secretaria</h2>
     <a href="{{ route('create') }}" class="btn-novo-membro">Novo Membro</a>
 
-    <a href="{{ route('carteirinhas') }}" class="btn-novo-membro">Carteiras de Membro</a>
+    {{-- <a href="{{ route('carteirinhas') }}" class="btn-novo-membro">Carteiras de Membro</a> --}}
     <form action="{{ route('show', ['id' => '3']) }}" method="post" id="form-pesquisar-membro">
         {{-- Corrigir este form, para que quando o usuário digitar e apertar em enviar, seja buscado pelo nome dele e não pelo ID --}}
         @csrf
@@ -34,7 +34,7 @@
         @else
             @foreach ($membros as $membro)
                 <a>{{ $membro->nome }}</a>
-                <a>{{ $membro->cidade }}</a>
+                <a>{{ $membro->congregacao }}</a>
                 <a>{{ $membro->setor }}</a>
                 <a>{{ date('d/m/Y', strtotime($membro->dataNascimento)) }}</a>
                 <a>{{ $membro->situacao }}</a>
