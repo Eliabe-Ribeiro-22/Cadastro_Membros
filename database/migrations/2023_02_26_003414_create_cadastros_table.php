@@ -13,9 +13,13 @@ class CreateCadastrosTable extends Migration
      */
     public function up()
     {
-        Schema::create('cadastros', function (Blueprint $table) {
+        
+        Schema::connection('sqlite')->create('cadastros', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nome')->default('');
+            $table->string('situacao')->default('');
+            $table->string('congregacao')->default('');
+            $table->string('setor')->default('');
         });
     }
 

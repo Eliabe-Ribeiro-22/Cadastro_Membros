@@ -1,0 +1,65 @@
+#exibir-membros {
+    width: 72vw;
+    margin: 1rem 1vw;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr;
+
+    /* borda ao redor da tabela */
+    border: 1px solid #a3a3a3;
+}
+#exibir-membros > :is(button, a) {
+    border: none;
+    text-align: center;
+}
+
+#exibir-membros > button {
+    height: 7vh;
+}
+#exibir-membros > a {
+    height: 60px;
+
+    position: relative;
+
+    display: flex;
+    background: white;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* Área de Listagem de membros */
+
+/* #exibir-membros {
+    width: 60vw;
+    margin: 1rem 1vw;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 2fr 2fr 2fr 1fr 1fr; */
+
+/*borda ao redor da tabela */
+/* border: 1px solid #000; */
+
+/* bordas dentro da visualização */
+/* background-color: black; */
+/* gap: 1px; 
+} */
+/*
+#exibir-membros > :is(button, a) {
+    border: none;
+    text-align: center;
+}
+
+#exibir-membros > button {
+    height: 7vh;
+}
+#exibir-membros > a {
+    height: 60px;
+
+    position: relative;
+
+    display: flex;
+    background: white;
+
+    align-items: center;
+    justify-content: center;
+} 
+*/
