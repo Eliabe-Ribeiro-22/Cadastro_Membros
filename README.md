@@ -57,3 +57,11 @@ Laravel, MySQL, CSS, HTML,
 ----
 
 - Refatoração do CRUD - Update - Com isso, todos os campos do cadastro de membros possuem corretamente a funcionalidade de alteração.
+
+#### 02/02 - Quinta-feira - Eliabe
+
+- Instalação de pacote DomPDF para exportar arquivos do tipo PDF, em nossa aplicação.
+
+- Gerado listagem de membros, no formato PDF.
+
+- Desenvolvida carteirinha para os membros cadastrados na plataforma.
