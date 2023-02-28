@@ -20,37 +20,36 @@
 
         /* Quadrado que exibe os 4 cartões de membro de uma folha */
         .show-cards {
-            /*margin: 10px 10vw;
+            margin: 10px 10vw;
 
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-row-gap: 35px;*/
+            grid-row-gap: 35px;
         }
 
         .card {
-            background-image: url('../assets/img/nuvens-bg-cartao.jpeg');
+            background-image: url('/assets/img/nuvens-bg-cartao.jpeg');
             background-size: cover;
-            /*width: 32vw;
-            height: 14rem;*/
-
+            width: 32vw;
+            height: 14rem;
         }
 
         .front {
-/*            margin-left: 80px;*/
+            margin-left: 80px;
         }
 
         /* cabeçalho padrão da frente do cartão */
         .header-card {
-            /*margin: 0% 4%;
+            margin: 0% 4%;
             width: 92%;
-*/
+
             background: #ffffff;
             opacity: 0.85;
         }
 
-        .header-card h4, .header-card p {
-/*            margin-top: 3px;*/
-            background: red;
+        .header-card> :is(h4, p) {
+            margin-top: 3px;
+
             text-align: center;
             overflow-wrap: break-word;
         }
@@ -66,40 +65,38 @@
 
         /* Corpo do cartão */
         .body-card {
-            background: green;
-            /*margin: 0 14px;
-            margin-top: 13px;*/
+            margin: 0 14px;
+            margin-top: 13px;
 
-/*          display: grid;
+            display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-column-gap: 7px;
-            grid-row-gap: 13px;*/
+            grid-row-gap: 13px;
         }
 
-        .body-card span {
-/*            height: 22px;*/
+        .body-card>span {
+            height: 22px;
 
             display: flex;
 
             align-items: center;
 
-/*            background: #fff;*/
-            
+            background: #fff;
             font-size: 16px;
 
-/*            border: 0.000001mm solid #c2c2c2;*/
-/*            border-radius: 2px;*/
+            border: 0.000001mm solid #c2c2c2;
+            border-radius: 2px;
         }
 
-        .body-card span.nome, .body-card span.congregation {
+        .body-card> :is(span.nome, span.congregation) {
             grid-column: span 4;
         }
 
-        .body-card span.mission {
+        .body-card>span.mission {
             grid-column: span 3;
         }
 
-        .body-card span.baptism-date, .body-card span.emission{
+        .body-card>:is(span.baptism-date, span.emission) {
             grid-column: span 2;
         }
     </style>

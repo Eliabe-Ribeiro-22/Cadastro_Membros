@@ -19,6 +19,11 @@ class PDFController extends Controller
             ->stream('Listagem_Membros');
     }
 
+    public function exemplo_carteirinha_membros(){
+        $cadastros = Cadastro::all();
+        return view('listagem.exemplo_carteirinhaTodosMembrosPDF', ['cadastros' => $cadastros]);
+    }
+
     public function carteirinha_membros()
     {
         $cadastros = Cadastro::all();
@@ -28,6 +33,5 @@ class PDFController extends Controller
             ->setPaper('a4')
             ->setWarnings(false)
             ->stream('Carteiras_Membros');
-        //return view('listagem.carteirinhaTodosMembrosPDF', ['cadastros' => $cadastros]);
     }
 }

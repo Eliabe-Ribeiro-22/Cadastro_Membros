@@ -24,4 +24,6 @@ Route::post('/membros/{id}', [CadastrosController::class, 'show'])->name('show')
 Route::get('listagem', [PDFController::class, 'listagem_todos_membros']);
 
 // Carteirinhas de Membros
+Route::get('exemplo_carteirinhas', [PDFController::class, 'exemplo_carteirinha_membros'])->name('exemplo_carteirinhas');
+
 Route::get('carteirinhas', [PDFController::class, 'carteirinha_membros'])->name('carteirinhas');
