@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cartões de Membro</title>
@@ -32,6 +32,7 @@
             background-size: cover;
             width: 32vw;
             height: 14rem;
+            background: blue;
         }
 
         .front {
@@ -105,8 +106,7 @@
 <body>
     <main>
         <div class="show-cards">
-            @foreach ($membros as $membro)
-                {{ $loop }}
+            @foreach ($cadastros as $cadastro)
                 <div class="card front">
                     <div class="header-card">
                         <h4>IGREJA EVANGÉLICA ASSEMBLEIA DE DEUS
@@ -120,12 +120,12 @@
                     </div>
 
                     <div class="body-card">
-                        <span class="nome">Nome: <b>{{ $membro->nome }}</b></span>
-                        <span class="mission">Cargo: <b>{{ $membro->situacao }}</b></span>
-                        <span>ID: <b>{{ $membro->id }}</b></span>
-                        <span class="baptism-date">Dt Batismo: <b>{{ $membro->dataBatismoAguas }}</b></span>
+                        <span class="nome">Nome: <b>{{ $cadastro->nome }}</b></span>
+                        <span class="mission">Cargo: <b>{{ $cadastro->situacao }}</b></span>
+                        <span>ID: <b>{{ $cadastro->id }}</b></span>
+                        <span class="baptism-date">Dt Batismo: <b>{{ $cadastro->dataBatismoAguas }}</b></span>
                         <span class="emission">Emissão: <b>{{ date('d/m/Y') }}</b></span>
-                        <span class="congregation">Congregação: <b>{{ $membro->congregacao }}</b></span>
+                        <span class="congregation">Congregação: <b>{{ $cadastro->congregacao }}</b></span>
 
                     </div>
                 </div>

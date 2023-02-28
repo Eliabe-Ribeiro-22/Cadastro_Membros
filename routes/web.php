@@ -2,7 +2,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CadastrosController;
-//use App\Http\Controllers\PDFController;
+use App\Http\Controllers\PDFController;
 
 Route::get('/', [CadastrosController::class, 'main'])->name('main');
 
@@ -21,7 +21,7 @@ Route::post('/membros/{id}', [CadastrosController::class, 'show'])->name('show')
 
 // Impressão de PDF
 // Listagem de todos os Membros e congregados
-//Route::get('listagem', [PDFController::class, 'listagem_membros']);
+Route::get('listagem', [PDFController::class, 'listagem_todos_membros']);
 
 // Carteirinhas de Membros
-//Route::get('carteirinhas', [PDFController::class, 'carteirinha_membros'])->name('carteirinhas');
+Route::get('carteirinhas', [PDFController::class, 'carteirinha_membros'])->name('carteirinhas');
