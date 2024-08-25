@@ -1,0 +1,57 @@
+.nav_tabs {
+    width: 600px;
+    height: 300px;
+    margin-top: 3vh;
+    position: relative;
+}
+
+.nav_tabs > ul {
+    list-style: none;
+}
+
+.nav_tabs > ul > li {
+    float: left;
+}
+
+.nav_tabs > ul > li > label {
+    width: 15vw;
+    padding: 0.6rem;
+
+    display: block;
+
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+
+    background: #c9c7c7;
+    cursor: pointer;
+}
+
+.rd_tabs:checked ~ label {
+    background: #525252;
+    color: white;
+}
+
+.rd_tabs {
+    display: none;
+}
+
+.conteudo {
+    height: 900px;
+    width: 79.6vw;
+
+    display: none;
+    position: absolute;
+    background: #ffffff;
+}
+
+.rd_tabs:checked ~ .conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 50px;
+    
+}
+
+.rd_tabs#tab-complemento:checked ~ .conteudo {
+    transform: translateX(-15vw);
+}
