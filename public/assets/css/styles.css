@@ -1,0 +1,87 @@
+/* Fonte Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Formulário de cadastro de membros */
+@import "cadastro-membros.css";
+
+@import "exibir-membros.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffc792;
+}
+
+/* nav */
+aside {
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 200px;
+
+    position: fixed;
+    display: flex;
+
+    /* semelhante ao siagweb */
+    /* background: #174e70; */
+    background: #c87d37;
+    z-index: 1;
+}
+aside > nav {
+    margin: 0 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+aside > nav > a {
+    padding: 16px;
+
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+    background: #864101;
+    border-bottom: 1px solid #d7a678;
+    border-radius: 10px;
+}
+
+aside > nav > a:hover {
+    background-color: white;
+}
+
+main {
+    margin-left: 220px;
+}
+
+#inicion-title, #inicio-subtitle {
+    margin: 2vh;
+    text-align: center;
+}
+
+.btn-novo-membro {
+    margin: 10px;
+    padding: 15px;
+    background: #b35802;
+
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font: 18px "Roboto", Arial, sans-serif;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+}
+
+#form-pesquisar-membro {
+    margin: 20px 0;
+}
