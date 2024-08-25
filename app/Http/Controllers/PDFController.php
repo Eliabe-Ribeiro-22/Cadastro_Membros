@@ -7,9 +7,7 @@ use Illuminate\Http\Request;
 use App\Membro;
 
 // Usando Metodos da classe PDF
-//use Barryvdh\DomPDF\Facade\Pdf;
-
-//use Pdf;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class PDFController extends Controller
 {
