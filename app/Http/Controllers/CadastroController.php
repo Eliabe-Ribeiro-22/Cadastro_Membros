@@ -11,9 +11,10 @@ class CadastroController extends Controller
 {
     public function index()
     {
-        $membros = null;
+        
         // Exibir os registros em Ordem Alfabética
         // $membros = Membro::All()->sortBy('nome');
+        $membros = Membro::All();
         return view('inicio', ['membros' => $membros]);
     }
 
@@ -24,7 +25,7 @@ class CadastroController extends Controller
 
     public function store(Request $request)
     {
-        // Faltou dataNascimento, situacao, sexo, dizimista
+        // Faltou dizimista
         $membro = new Membro();
 
         // Campos acima das guias do formulário

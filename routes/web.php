@@ -17,10 +17,10 @@ Route::get('/membros/edit/{id}', [CadastroController::class, 'edit'])->name('edi
 Route::put('/membros/edit/{id}', [CadastroController::class, 'update'])->name('update');
 
 // Impressão de PDF
-//use App\Http\Controllers\PDFController;
+use App\Http\Controllers\PDFController;
 
 // Listagem de todos os Membros e congregados
-//Route::get('listagem', [PDFController::class, 'listagem_membros']);
+Route::get('listagem', [PDFController::class, 'listagem_membros']);
 
 // Carteirinhas de Membros
-//Route::get('carteirinhas', [PDFController::class, 'carteirinha_membros'])->name('carteirinhas');
+Route::get('carteirinhas', [PDFController::class, 'carteirinha_membros'])->name('carteirinhas');

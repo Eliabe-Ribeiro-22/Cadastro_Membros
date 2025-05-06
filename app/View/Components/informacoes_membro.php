@@ -12,7 +12,7 @@ class informacoes_membro extends Component
      * @return void
      */
     
-//Campos acima das guias
+    //Campos acima das guias
     public $membro;
 
     public function __construct($membro)

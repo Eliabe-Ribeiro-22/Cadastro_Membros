@@ -48,7 +48,7 @@ return new class extends Migration {
             $table->dropColumn('cpf');
             $table->dropColumn('rg');
             $table->dropColumn('naturalidade');
-            // $table->dropColumn('dataNascimento');
+            $table->dropColumn('dataNascimento');
             $table->dropColumn('nacionalidade');
             $table->dropColumn('profissao');
             $table->dropColumn('sexo');
